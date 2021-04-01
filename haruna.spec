@@ -1,3 +1,5 @@
+%global optflags %{optflags} -O3
+
 Name:           haruna
 Version:        0.6.0
 Release:        1
@@ -6,7 +8,7 @@ License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://github.com/g-fb/haruna
 Source0:        https://github.com/g-fb/haruna/archive/%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires: cmake >= 3.15
+BuildRequires: cmake
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Breeze)
 BuildRequires: hicolor-icon-theme
@@ -39,7 +41,8 @@ Haruna is a video player built with Qt/QML on top of libmpv.
 %autosetup -p1
 
 %build
-%cmake
+%cmake \
+        -DCMAKE_BUILD_TYPE=Release
 %make_build
 
 %install
