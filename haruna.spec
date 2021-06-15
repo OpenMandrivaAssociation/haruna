@@ -52,6 +52,6 @@ Haruna is a video player built with Qt/QML on top of libmpv.
 %license LICENSES/CC-BY-4.0.txt LICENSES/GPL-3.0-or-later.txt LICENSES/WTFPL.txt
 %doc README.md
 %{_bindir}/%{name}
-#{_datadir}/applications/org.kde.haruna.desktop
-#{_datadir}/icons/hicolor/*/apps/org.kde.haruna.svg
-#{_datadir}/metainfo/org.kde.haruna.appdata.xml
+%{_datadir}/applications/org.kde.haruna.desktop
+%{_datadir}/icons/hicolor/*/apps/org.kde.haruna.svg
+%{_datadir}/metainfo/org.kde.haruna.metainfo.xml
