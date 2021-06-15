@@ -1,12 +1,12 @@
 %global optflags %{optflags} -O3
 
 Name:           haruna
-Version:        0.6.3
+Version:        0.6.3.1
 Release:        1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://github.com/g-fb/haruna
-Source0:        https://github.com/g-fb/haruna/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        https://invent.kde.org/multimedia/haruna/-/archive/%{version}/%{name}-%{version}.tar.bz2
 
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
