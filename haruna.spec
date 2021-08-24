@@ -6,7 +6,7 @@ Release:        1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://github.com/g-fb/haruna
-Source0:        https://invent.kde.org/multimedia/haruna/-/archive/%{version}/%{name}-%{version}.tar.bz2
+Source0:        https://invent.kde.org/multimedia/haruna/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
@@ -38,7 +38,7 @@ Requires: youtube-dl
 Haruna is a video player built with Qt/QML on top of libmpv.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-v%{version} -p1
 
 %build
 %cmake \
