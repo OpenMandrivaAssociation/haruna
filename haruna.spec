@@ -12,6 +12,7 @@ BuildRequires: cmake
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Breeze)
 BuildRequires: hicolor-icon-theme
+BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5CoreAddons)
 BuildRequires: cmake(KF5FileMetaData)
@@ -26,6 +27,8 @@ BuildRequires: cmake(Qt5Qml)
 BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5QuickControls2)
 BuildRequires: pkgconfig(mpv)
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: youtube-dl
 
 Requires: mpv
 Requires: kio-extras
