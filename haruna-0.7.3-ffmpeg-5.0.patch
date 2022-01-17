@@ -1,0 +1,12 @@
+diff -up haruna-v0.7.3/src/framedecoder.h.omv~ haruna-v0.7.3/src/framedecoder.h
+--- haruna-v0.7.3/src/framedecoder.h.omv~	2022-01-17 03:53:16.663305741 +0100
++++ haruna-v0.7.3/src/framedecoder.h	2022-01-17 03:53:24.523346487 +0100
+@@ -69,7 +69,7 @@ private:
+     int                     m_VideoStream;
+     AVFormatContext*        m_pFormatContext;
+     AVCodecContext*         m_pVideoCodecContext;
+-    AVCodec*                m_pVideoCodec;
++    const AVCodec*          m_pVideoCodec;
+     AVStream*               m_pVideoStream;
+     AVFrame*                m_pFrame;
+     quint8*                 m_pFrameBuffer;
