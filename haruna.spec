@@ -1,13 +1,12 @@
 %global optflags %{optflags} -O3
 
 Name:           haruna
-Version:        0.7.3
-Release:        2
+Version:        0.8.0
+Release:        1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://invent.kde.org/multimedia/haruna
 Source0:        https://invent.kde.org/multimedia/haruna/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-Patch0:		haruna-0.7.3-ffmpeg-5.0.patch
 
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
@@ -59,4 +58,5 @@ Haruna is a video player built with Qt/QML on top of libmpv.
 %{_bindir}/%{name}
 %{_datadir}/applications/org.kde.haruna.desktop
 %{_datadir}/icons/hicolor/*/apps/haruna.svg
+%{_iconsdir}/hicolor/*x"/apps/haruna.png
 %{_datadir}/metainfo/org.kde.haruna.metainfo.xml
