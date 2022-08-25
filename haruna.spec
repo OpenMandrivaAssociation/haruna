@@ -1,7 +1,7 @@
 %global optflags %{optflags} -O3
 
 Name:           haruna
-Version:        0.8.0
+Version:        0.9.1
 Release:        1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
@@ -52,7 +52,7 @@ Haruna is a video player built with Qt/QML on top of libmpv.
 %make_install -C build
 
 %files
-%license LICENSES/CC-BY-4.0.txt LICENSES/GPL-3.0-or-later.txt LICENSES/WTFPL.txt
+%license LICENSES/CC-BY-4.0.txt LICENSES/GPL-3.0-or-later.txt
 %doc README.md
 %doc %{_datadir}/doc/HTML/en/haruna/
 %{_bindir}/%{name}
