@@ -52,7 +52,7 @@ Haruna is a video player built with Qt/QML on top of libmpv.
 %make_install -C build
 
 %files
-%license LICENSES/CC-BY-4.0.txt LICENSES/GPL-3.0-or-later.txt LICENSES/WTFPL.txt
+%license LICENSES/CC-BY-4.0.txt LICENSES/GPL-3.0-or-later.txt
 %doc README.md
 %doc %{_datadir}/doc/HTML/en/haruna/
 %{_bindir}/%{name}
