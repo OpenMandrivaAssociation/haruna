@@ -2,7 +2,7 @@
 
 Name:           haruna
 Version:        0.10.3
-Release:        2
+Release:        3
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://invent.kde.org/multimedia/haruna
