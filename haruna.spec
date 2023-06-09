@@ -10,7 +10,7 @@ Source0:        https://invent.kde.org/multimedia/haruna/-/archive/v%{version}/%
 
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Breeze)
+BuildRequires: cmake(Breeze) < 5.27.80
 BuildRequires: hicolor-icon-theme
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(KF5Config)
