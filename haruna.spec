@@ -1,7 +1,7 @@
 %global optflags %{optflags} -O3
 
 Name:           haruna
-Version:        0.12.1
+Version:        0.12.2
 Release:        1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
