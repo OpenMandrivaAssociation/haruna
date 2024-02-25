@@ -1,55 +1,63 @@
 %global optflags %{optflags} -O3
+%define gitdate 20240226
+%define gitbranch master
+%define gitbranchd %(echo %{gitbranch} |sed -e 's,/,-,g')
 
 Name:           haruna
-Version:        0.12.3
-Release:        1
+Version:        0.12.4
+Release:        %{?gitdate:0.%{gitdate}.}1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://invent.kde.org/multimedia/haruna
-Source0:        https://invent.kde.org/multimedia/haruna/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+Source0:        https://invent.kde.org/multimedia/haruna/-/archive/%{?gitdate:%{gitbranch}}%{!?gitdate:v%{version}}/%{name}-%{?gitdate:%{gitbranchd}}%{!?gitdate:v%{version}}.tar.bz2
 
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Breeze) < 5.27.80
+BuildRequires: cmake(Breeze) >= 6.0.0
 BuildRequires: hicolor-icon-theme
-BuildRequires: cmake(KF5DocTools)
-BuildRequires: cmake(KF5Config)
-BuildRequires: cmake(KF5CoreAddons)
-BuildRequires: cmake(KF5FileMetaData)
-BuildRequires: cmake(KF5I18n)
-BuildRequires: cmake(KF5IconThemes)
-BuildRequires: cmake(KF5KIO)
-BuildRequires: cmake(KF5Kirigami2)
-BuildRequires: cmake(KF5XmlGui)
-BuildRequires: cmake(Qt5Core)
-BuildRequires: cmake(Qt5DBus)
-BuildRequires: cmake(Qt5Qml)
-BuildRequires: cmake(Qt5Quick)
-BuildRequires: cmake(Qt5QuickControls2)
+BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6DBus)
+BuildRequires: cmake(Qt6Gui)
+BuildRequires: cmake(Qt6Qml)
+BuildRequires: cmake(Qt6Quick)
+BuildRequires: cmake(Qt6QuickControls2)
+BuildRequires: cmake(MpvQt)
+BuildRequires: cmake(KF6ColorScheme)
+BuildRequires: cmake(KF6Config)
+BuildRequires: cmake(KF6CoreAddons)
+BuildRequires: cmake(KF6DocTools)
+BuildRequires: cmake(KF6FileMetaData)
+BuildRequires: cmake(KF6I18n)
+BuildRequires: cmake(KF6IconThemes)
+BuildRequires: cmake(KF6KIO)
+BuildRequires: cmake(KF6Kirigami)
+BuildRequires: cmake(KF6WindowSystem)
 BuildRequires: pkgconfig(mpv)
 BuildRequires: pkgconfig(libavcodec)
 BuildRequires: youtube-dl
 
 Requires: mpv
-Requires: kio-extras
-Requires: breeze
-Requires: breeze-icons
-Requires: qqc2-breeze-style
+Requires: plasma6-kio-extras
+Requires: plasma6-breeze
+Requires: kf6-breeze-icons
+Requires: plasma6-qqc2-breeze-style
 Requires: youtube-dl
 
 %description
 Haruna is a video player built with Qt/QML on top of libmpv.
 
 %prep
-%autosetup -n %{name}-v%{version} -p1
+%autosetup -n %{name}-%{?gitdate:%{gitbranchd}}%{!?gitdate:v%{version}} -p1
+%cmake \
+	-DQT_MAJOR_VERSION=6 \
+        -DCMAKE_BUILD_TYPE=Release \
+	-G Ninja
 
 %build
-%cmake \
-        -DCMAKE_BUILD_TYPE=Release
-%make_build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %find_lang %{name}
 
