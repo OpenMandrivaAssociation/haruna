@@ -5,7 +5,7 @@
 
 Name:           haruna
 Version:        0.12.4
-Release:        %{?gitdate:0.%{gitdate}.}1
+Release:        %{?gitdate:0.%{gitdate}.}2
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://invent.kde.org/multimedia/haruna
@@ -37,11 +37,10 @@ BuildRequires: pkgconfig(libavcodec)
 BuildRequires: youtube-dl
 
 Requires: mpv
-Requires: plasma6-kio-extras
-Requires: plasma6-breeze
-Requires: kf6-breeze-icons
+Requires: (kf6-breeze-icons or breeze-icons)
 Requires: plasma6-qqc2-breeze-style
 Requires: youtube-dl
+Recommends: plasma6-kio-extras
 
 %description
 Haruna is a video player built with Qt/QML on top of libmpv.
