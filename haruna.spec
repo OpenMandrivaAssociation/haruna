@@ -1,11 +1,11 @@
 %global optflags %{optflags} -O3
-%define gitdate 20240226
-%define gitbranch master
+#define gitdate 20240226
+#define gitbranch master
 %define gitbranchd %(echo %{gitbranch} |sed -e 's,/,-,g')
 
 Name:           haruna
-Version:        0.12.4
-Release:        %{?gitdate:0.%{gitdate}.}2
+Version:        1.0.1
+Release:        %{?gitdate:0.%{gitdate}.}1
 Summary:        Video player built with Qt/QML on top of libmpv
 License:        CC-BY-4.0, BSD-3 Clause, GPL-3.0-or-later and WTFPL
 URL:            https://invent.kde.org/multimedia/haruna
