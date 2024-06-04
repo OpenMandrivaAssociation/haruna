@@ -16,6 +16,7 @@ BuildRequires: cmake(ECM)
 BuildRequires: cmake(Breeze) >= 6.0.0
 BuildRequires: hicolor-icon-theme
 BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6Core5Compat)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Qml)
@@ -34,7 +35,7 @@ BuildRequires: cmake(KF6Kirigami)
 BuildRequires: cmake(KF6WindowSystem)
 BuildRequires: pkgconfig(mpv)
 BuildRequires: pkgconfig(libavcodec)
-BuildRequires: youtube-dl
+BuildRequires: yt-dlp
 
 Requires: mpv
 Requires: (kf6-breeze-icons or breeze-icons)
