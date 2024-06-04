@@ -40,7 +40,7 @@ BuildRequires: yt-dlp
 Requires: mpv
 Requires: (kf6-breeze-icons or breeze-icons)
 Requires: plasma6-qqc2-breeze-style
-Requires: youtube-dl
+Requires: (yt-dlp or youtube-dl)
 Recommends: plasma6-kio-extras
 
 %description
